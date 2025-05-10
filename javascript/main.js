@@ -20,9 +20,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   const enterArenaBtn = document.getElementById('enter-arena');
+  const chooseGameMode = document.querySelector('.choose-game-mode');
+  const singleplayerBtn = document.querySelector('.singleplayer-btn');
+  const multiplayerBtn = document.querySelector('.multiplayer-btn');
+
+  // Initially hide the game mode selection
+  chooseGameMode.style.display = 'none';
 
   enterArenaBtn.addEventListener('click', function () {
-    window.location.href = "game.html";
+    // Show the game mode selection
+    chooseGameMode.style.display = 'flex';
+  });
+
+  singleplayerBtn.addEventListener('click', function () {
+    window.location.href = "/singleplayer/game.html";
+  });
+
+  multiplayerBtn.addEventListener('click', function () {
+    window.location.href = "/multiplayer/game.html";
   });
 });
 
@@ -30,11 +45,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const enterArenaBtn = document.getElementById('enter-home');
 
   enterArenaBtn.addEventListener('click', function () {
-    window.location.href = "index.html";
+    window.location.href = "/index.html";
   });
 });
 
 function selectPlayers(num) {
   // Redirect to board.html with the number of players as a query parameter
-  window.location.href = `board.html?players=${num}`;
+  window.location.href = `/singleplayer/board.html?players=${num}`;
+}
+
+function selectMultiPlayers(num) {
+  // Redirect to board.html with the number of players as a query parameter
+  window.location.href = `/multiplayer/board.html?players=${num}`;
 }

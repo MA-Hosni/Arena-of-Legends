@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arène des Légendes</title>
+        <link rel="icon" href="../assets/icon.png" type="image/x-icon"/>
+        <!--STYLESHEET-->
+        <link rel="stylesheet" href="../css/game.css" />
+        <!--ICONS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <div class="title-container">
+                <div id="icon-left">
+                    <i class="fa-solid fa-hat-wizard"></i>
+                </div>
+                <h1 class="title">Arène des Légendes</h1>
+                <div id="icon-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 25 20" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-swords-icon lucide-swords"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" x2="19" y1="19" y2="13"/><line x1="16" x2="20" y1="16" y2="20"/><line x1="19" x2="21" y1="21" y2="19"/><polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"/><line x1="5" x2="9" y1="14" y2="18"/><line x1="7" x2="4" y1="17" y2="20"/><line x1="3" x2="5" y1="19" y2="21"/></svg>
+                </div>
+            </div>
+            <button class="button" id="enter-home">
+                <div class="button-overlay"></div>
+                <span>Home
+                    <i class="fa-solid fa-house"></i>
+                </span>
+            </button>
+  
+        </header>
+
+        <main>
+            <h1 class="title" style="font-size: 2.25rem; font-weight: 800;">Choose Your Heroes</h1>
+            <p class="subtitle">
+                Each hero has unique abilities and playstyles. Choose wisely!
+            </p>
+
+            <div class="hero-container">
+                <div class="hero-card">
+                    <div class="hero-icon knight-icon">K</div>
+                    <h2>Knight</h2>
+                    <p>Health: 120</p>
+                    <p>Move: 1 squares</p>
+                    <p>Attack range: 1 squares</p>
+                    <p>Strength: Resilient, good in melee</p>
+                    <p>Weakness: Slow</p>
+                    <div class="special"><span>Special:</span> War Cry (+Damage)</div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hero-icon ninja-icon">N</div>
+                    <h2>Ninja</h2>
+                    <p>Health: 120</p>
+                    <p>Move: 2 squares</p>
+                    <p>Attack range: 1 squares</p>
+                    <p>Strength: Fast, easy dodge</p>
+                    <p>Weakness: Fragile</p>
+                    <div class="special"><span>Special:</span> Double Attack</div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hero-icon wizard-icon">W</div>
+                    <h2>Wizard</h2>
+                    <p>Health: 120</p>
+                    <p>Move: 1 squares</p>
+                    <p>Attack range: 3 squares</p>
+                    <p>Strength: Powerful ranged magic attack</p>
+                    <p>Weakness: Weak defense</p>
+                    <div class="special"><span>Special:</span> Magic Storm (Area)</div>
+                </div>
+            </div>
+
+            <div class="start-game">
+                <h3>Start Game</h3>
+                <p>Select the number of players to begin:</p>
+                <button class="player-btn" onclick="selectPlayers(2)">2 Players</button>
+                <button class="player-btn" onclick="selectPlayers(3)">3 Players</button>
+                <button class="player-btn" onclick="selectPlayers(4)">4 Players</button>
+                <!-- <a href="board.html"><button class="player-btn">Player</button></a> -->
+            </div>
+        </main>
+
+    <!-- Link SweetAlert2 (for styled alert) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Link your custom JavaScript file -->
+    <script src="../javascript/main.js"></script>
+    </body>
+</html>
